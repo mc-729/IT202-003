@@ -1,5 +1,6 @@
 <?php
 require(__DIR__ . "/../../partials/nav.php");
+reset_session();
 ?>
 <form onsubmit="return validate(this)" method="POST">
     <div>
@@ -52,7 +53,7 @@ if (isset($_POST["email"]) && isset($_POST["password"]) && isset($_POST["confirm
         flash("Invalid email");
         $hasError = true;
     }
-    if (!preg_match('/^[a-z0-9_-]{3,16}$/', $username)) {
+    if (!preg_match('/^[a-z0-9_-]{3,30}$/i', $username)) {
         flash("Username must only be alphanumeric and can only contain - or _");
         $hasError = true;
     }
@@ -75,7 +76,7 @@ if (isset($_POST["email"]) && isset($_POST["password"]) && isset($_POST["confirm
     if ($hasError) {
         //flash("<pre>" . var_export($errors, true) . "</pre>");
     } else {
-        flash("Welcome, $email"); //will show on home.php
+        //flash("Welcome, $email"); //will show on home.php
         $hash = password_hash($password, PASSWORD_BCRYPT);
         $db = getDB();
         $stmt = $db->prepare("INSERT INTO Users (email, password, username) VALUES(:email, :password, :username)");
@@ -83,8 +84,9 @@ if (isset($_POST["email"]) && isset($_POST["password"]) && isset($_POST["confirm
             $stmt->execute([":email" => $email, ":password" => $hash, ":username" => $username]);
             flash("You've registered, yay...");
         } catch (Exception $e) {
-            flash("There was a problem registering");
-            flash("<pre>" . var_export($e, true) . "</pre>");
+            /*flash("There was a problem registering");
+            flash("<pre>" . var_export($e, true) . "</pre>");*/
+            users_check_duplicate($e->errorInfo);
         }
     }
 }
