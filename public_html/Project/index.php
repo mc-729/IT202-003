@@ -1,2 +1,3 @@
+<?php
 
-<?php echo "It works!";?>
+die(header("Location: login.php"));
