@@ -23,7 +23,7 @@
 ### Proposal Checklist and Evidence
 
 - Milestone 1
-- [ ] \(mm/dd/yyyy of completion) User will be able to register a new account (from the proposal bullet point, if it's a sub-point indent it properly)
+- [ ] \(11/1/2021 of completion) User will be able to register a new account (from the proposal bullet point, if it's a sub-point indent it properly)
   - Form Fields
     - Username, email, password, confirm password (other fields optional)
     - Email is required and must be validated
