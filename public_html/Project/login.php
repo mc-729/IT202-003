@@ -2,8 +2,8 @@
 require(__DIR__ . "/../../partials/nav.php"); ?>
 <form onsubmit="return validate(this)" method="POST">
     <div>
-        <label for="email">Email</label>
-        <input type="email" name="email" required />
+        <label for="email">Username/Email</label>
+        <input type="text" name="email" required />
     </div>
     <div>
         <label for="pw">Password</label>
@@ -31,18 +31,26 @@ if (isset($_POST["email"]) && isset($_POST["password"])) {
     $hasErrors = false;
     if (empty($email)) {
         //array_push($errors, "Email must be set");
-        flash("Email must be set", "warning");
+        flash("Username or email must be set", "warning");
         $hasErrors = true;
     }
     //sanitize
     //$email = filter_var($email, FILTER_SANITIZE_EMAIL);
-    $email = sanitize_email($email);
-    //validate
-    //if (!filter_var($email, FILTER_VALIDATE_EMAIL)) {
-    if (!is_valid_email($email)) {
-        //array_push($errors, "Invalid email address");
-        flash("Invalid email address", "warning");
-        $hasErrors = true;
+    if (str_contains($email, "@")) {
+        $email = sanitize_email($email);
+        //validate
+        //if (!filter_var($email, FILTER_VALIDATE_EMAIL)) {
+        if (!is_valid_email($email)) {
+            //array_push($errors, "Invalid email address");
+            flash("Invalid email address", "warning");
+
+            $hasErrors = true;
+        }
+    } else {
+        if (!preg_match('/^[a-z0-9_-]{3,30}$/i', $email)) {
+            flash("Username must only be alphanumeric and can only contain - or _");
+            $hasErrors = true;
+        }
     }
     if (empty($password)) {
         //array_push($errors, "Password must be set");
@@ -61,7 +69,7 @@ if (isset($_POST["email"]) && isset($_POST["password"])) {
     } else {
         //TODO 4
         $db = getDB();
-        $stmt = $db->prepare("SELECT id, email, password from Users where email = :email");
+        $stmt = $db->prepare("SELECT id, username, email, password from Users where email = :email or username = :email");
         try {
             $r = $stmt->execute([":email" => $email]);
             if ($r) {
@@ -72,6 +80,18 @@ if (isset($_POST["email"]) && isset($_POST["password"])) {
                     if (password_verify($password, $hash)) {
                         ///echo "Weclome $email";
                         $_SESSION["user"] = $user;
+                        //lookup potential roles
+                        $stmt = $db->prepare("SELECT Roles.name FROM Roles 
+                        JOIN UserRoles on Roles.id = UserRoles.role_id 
+                        where UserRoles.user_id = :user_id and Roles.is_active = 1 and UserRoles.is_active = 1");
+                        $stmt->execute([":user_id" => $user["id"]]);
+                        $roles = $stmt->fetchAll(PDO::FETCH_ASSOC); //fetch all since we'll want multiple
+                        //save roles or empty array
+                        if ($roles) {
+                            $_SESSION["user"]["roles"] = $roles; //at least 1 role
+                        } else {
+                            $_SESSION["user"]["roles"] = []; //no roles
+                        }
                         die(header("Location: home.php"));
                     } else {
                         //echo "Invalid password";
