@@ -185,16 +185,17 @@ function draw() {
           //sideLength = 200;
           //targetLength = 10;
       }
-      if (score <= 5){
-          targetLength = 50;
-          sideLength = 35;
+      //Significant Mod 2
+      if (score <= 5){ //Check is player's score is 5 or less
+          targetLength = 50; //Changes target square based on score
+          sideLength = 35; //Changes player square based on score
       } else if(score <= 10){
           targetLength = 10;
           sideLength = 200;
       }  else if(score <= 15){
           targetLength = 75;
           sideLength = 50;
-    } else{
+    } else{ //Returns the original values of player and target squares once score > 15
         targetLength = 25;
         sideLength = 50;
     }
