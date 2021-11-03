@@ -1,32 +1,31 @@
 <?php
 require_once(__DIR__ . "/../../partials/nav.php");
-if (!is_logged_in()) {
-    die(header("Location: login.php"));
-}
+is_logged_in(true);
 ?>
 <?php
 if (isset($_POST["save"])) {
     $email = se($_POST, "email", null, false);
     $username = se($_POST, "username", null, false);
-
-    $params = [":email" => $email, ":username" => $username, ":id" => get_user_id()];
-    $db = getDB();
-    $stmt = $db->prepare("UPDATE Users set email = :email, username = :username where id = :id");
-    try {
-        $stmt->execute($params);
-    } catch (Exception $e) {
-        if ($e->errorInfo[1] === 1062) {
-            //https://www.php.net/manual/en/function.preg-match.php
-            preg_match("/Users.(\w+)/", $e->errorInfo[2], $matches);
-            if (isset($matches[1])) {
-                flash("The chosen " . $matches[1] . " is not available.", "warning");
-            } else {
-                //TODO come up with a nice error message
-                echo "<pre>" . var_export($e->errorInfo, true) . "</pre>";
-            }
-        } else {
-            //TODO come up with a nice error message
-            echo "<pre>" . var_export($e->errorInfo, true) . "</pre>";
+    $hasError = false;
+    //sanitize
+    $email = sanitize_email($email);
+    //validate
+    if (!is_valid_email($email)) {
+        flash("Invalid email address", "danger");
+        $hasError = true;
+    }
+    if (!preg_match('/^[a-z0-9_-]{3,16}$/i', $username)) {
+        flash("Username must only be alphanumeric and can only contain - or _", "danger");
+        $hasError = true;
+    }
+    if (!$hasError) {
+        $params = [":email" => $email, ":username" => $username, ":id" => get_user_id()];
+        $db = getDB();
+        $stmt = $db->prepare("UPDATE Users set email = :email, username = :username where id = :id");
+        try {
+            $stmt->execute($params);
+        } catch (Exception $e) {
+            users_check_duplicate($e->errorInfo);
         }
     }
     //select fresh data from table
@@ -39,10 +38,10 @@ if (isset($_POST["save"])) {
             $_SESSION["user"]["email"] = $user["email"];
             $_SESSION["user"]["username"] = $user["username"];
         } else {
-            flash("User doesn't exist", "danger");
+            flash("User doesn't exist.", "danger");
         }
     } catch (Exception $e) {
-        flash("An unexpected error occurred, please try again", "danger");
+        flash("An unexpected error occurred, please try again.", "danger");
         //echo "<pre>" . var_export($e->errorInfo, true) . "</pre>";
     }
 
@@ -69,14 +68,14 @@ if (isset($_POST["save"])) {
 
                         flash("Password reset", "success");
                     } else {
-                        flash("Current password is invalid", "warning");
+                        flash("Current password is invalid!", "warning");
                     }
                 }
             } catch (Exception $e) {
                 echo "<pre>" . var_export($e->errorInfo, true) . "</pre>";
             }
         } else {
-            flash("New passwords don't match", "warning");
+            flash("New passwords don't match!", "warning");
         }
     }
 }
@@ -86,32 +85,34 @@ if (isset($_POST["save"])) {
 $email = get_user_email();
 $username = get_username();
 ?>
-<form method="POST" onsubmit="return validate(this);">
-    <div class="mb-3">
-        <label for="email">Email</label>
-        <input type="email" name="email" id="email" value="<?php se($email); ?>" />
-    </div>
-    <div class="mb-3">
-        <label for="username">Username</label>
-        <input type="text" name="username" id="username" value="<?php se($username); ?>" />
-    </div>
-    <!-- DO NOT PRELOAD PASSWORD -->
-    <div>Password Reset</div>
-    <div class="mb-3">
-        <label for="cp">Current Password</label>
-        <input type="password" name="currentPassword" id="cp" />
-    </div>
-    <div class="mb-3">
-        <label for="np">New Password</label>
-        <input type="password" name="newPassword" id="np" />
-    </div>
-    <div class="mb-3">
-        <label for="conp">Confirm Password</label>
-        <input type="password" name="confirmPassword" id="conp" />
-    </div>
-    <input type="submit" value="Update Profile" name="save" />
-</form>
-
+<div class="container-fluid">
+    <h1>Profile</h1>
+    <form method="POST" onsubmit="return validate(this);">
+        <div class="mb-3">
+            <label class="form-label" for="email">Email</label>
+            <input class="form-control" type="email" name="email" id="email" value="<?php se($email); ?>" />
+        </div>
+        <div class="mb-3">
+            <label class="form-label" for="username">Username</label>
+            <input class="form-control" type="text" name="username" id="username" value="<?php se($username); ?>" />
+        </div>
+        <!-- DO NOT PRELOAD PASSWORD -->
+        <div class="mb-3">Password Reset</div>
+        <div class="mb-3">
+            <label class="form-label" for="cp">Current Password</label>
+            <input class="form-control" type="password" name="currentPassword" id="cp" />
+        </div>
+        <div class="mb-3">
+            <label class="form-label" for="np">New Password</label>
+            <input class="form-control" type="password" name="newPassword" id="np" />
+        </div>
+        <div class="mb-3">
+            <label class="form-label" for="conp">Confirm Password</label>
+            <input class="form-control" type="password" name="confirmPassword" id="conp" />
+        </div>
+        <input type="submit" class="mt-3 btn btn-primary" value="Update Profile" name="save" />
+    </form>
+</div>
 <script>
     function validate(form) {
         let pw = form.newPassword.value;
@@ -128,16 +129,14 @@ $username = get_username();
             let outerDiv = document.createElement("div");
             outerDiv.className = "row justify-content-center";
             let innerDiv = document.createElement("div");
-            
             //apply the CSS (these are bootstrap classes which we'll learn later)
             innerDiv.className = "alert alert-warning";
             //set the content
             innerDiv.innerText = "Password and Confirm password must match";
-            
             outerDiv.appendChild(innerDiv);
             //add the element to the DOM (if we don't it merely exists in memory)
             flash.appendChild(outerDiv);*/
-            flash("Password and Confirm password must match", "warning");
+            flash("Password and Confirm password must match!", "warning");
             isValid = false;
         }
         return isValid;

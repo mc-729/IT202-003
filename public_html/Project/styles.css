@@ -11,9 +11,9 @@
 }
 
 .alert-info {
-    background-color: teal;
+    background-color: green;
 }
-nav li{display: inline; background-color: gray;}
+nav li{display: inline; /*background-color: gold;*/}
 nav li a{color: ghostwhite}
 input{border-radius: 25px;}
 body{
