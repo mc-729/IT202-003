@@ -1,6 +1,5 @@
 <?php
 require(__DIR__ . "/../../partials/nav.php");
-reset_session();
 $email = se($_POST, "email","", false);
 ?>
 <div class="container-fluid">
