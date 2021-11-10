@@ -1,12 +1,15 @@
 <?php
 require(__DIR__ . "/../../partials/nav.php");
+reset_session();
+$email = se($_POST, "email","", false);
 ?>
 <div class="container-fluid">
     <h1>Login</h1>
     <form onsubmit="return validate(this)" method="POST">
         <div class="mb-3">
             <label class="form-label" for="email">Username/Email</label>
-            <input class="form-control" type="text" id="email" name="email" required />
+            <input class="form-control" type="text" id="email" name="email" required 
+            required value ="<?php se($email); ?>" />
         </div>
         <div class="mb-3">
             <label class="form-label" for="pw">Password</label>
