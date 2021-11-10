@@ -23,7 +23,7 @@
 ### Proposal Checklist and Evidence
 
 - Milestone 1
-- [ ] \(11/1/2021 of completion) User will be able to register a new account (from the proposal bullet point, if it's a sub-point indent it properly)
+- [X] \(11/1/2021 of completion) User will be able to register a new account 
   - Form Fields
     - Username, email, password, confirm password (other fields optional)
     - Email is required and must be validated
@@ -45,9 +45,10 @@
     - Pull Requests
       - PR link #1 https://github.com/mc-729/IT202-003/pull/9
       - PR link #2 https://github.com/mc-729/IT202-003/pull/36 
+      - PR link #3 https://github.com/mc-729/IT202-003/pull/37
       - Issue Link https://github.com/mc-729/IT202-003/issues/11
     - Screenshots
-      - Screenshot #1 ![image](https://user-images.githubusercontent.com/50148042/140771406-30058f08-80ea-4857-9ced-eadd6ea5928f.png) (repeat as necessary)
+      - Screenshot #1 ![image](https://user-images.githubusercontent.com/50148042/140771406-30058f08-80ea-4857-9ced-eadd6ea5928f.png) 
         - Screenshot #1 description explaining what you're trying to show:
           - This shows that the form fields are displaying and functioning as intended.
       - Screenshot #2 ![image](https://user-images.githubusercontent.com/50148042/140771620-3cbe22d0-9350-4471-8f6b-b1bd17e921aa.png) 
@@ -62,9 +63,14 @@
       - Screenshot #5 ![image](https://user-images.githubusercontent.com/50148042/140773310-319b4535-db99-4dd6-83a8-7568705f3dba.png)
         - Screenshot #5 description explaining what you're trying to show:
           - This shows that the account has successfully been registered.
+      - Screenshot #6 ![image](https://user-images.githubusercontent.com/50148042/141145614-2807cede-c170-452b-b422-c0d04903c299.png)
+        -  Screenshot #6 description explaining what you're trying to show:
+          - Email and Username field do not get cleared when one of them is taken.
+
+
         
 
-- [ ] \(11/01/2021) User will be able to login to their account (given they enter the correct credentials) (from the proposal bullet point, if it's a sub-point indent it properly)
+- [X] \(11/01/2021) User will be able to login to their account (given they enter the correct credentials) 
 
   - Form
     - User can login with email or username
@@ -89,8 +95,10 @@
       - Screenshot #2 ![image](https://user-images.githubusercontent.com/50148042/140777139-3e06ee33-edb0-4935-9d30-9ca9032c658a.png)
         - Screenshot #2 description explaining what you're trying to show:
           - Failed login, wrong password with flash message.
-
-- [ ] \(11/01/2021) User will be able to logout (from the proposal bullet point, if it's a sub-point indent it properly)
+      - Screenshot #3 ![image](https://user-images.githubusercontent.com/50148042/141147747-f44addc0-4a6a-4aca-8f39-ff74a3580727.png)
+        - Screenshot #3 description explaining what you're trying to show:
+          - Failed login, wrong/not found email with flash message.
+- [X] \(11/01/2021) User will be able to logout 
   - Logging out will redirect to login page
   - User should see a message that they’ve successfully logged out
   - Session should be destroyed (so the back button doesn’t allow them access back in)
@@ -98,13 +106,13 @@
     - Status: Pending (Completed, Partially working, Incomplete, Pending)
     - Direct Link: (Direct link to the file or files in heroku prod for quick testing (even if it's a protected page))
     - Pull Requests
-      - PR link #1 (repeat as necessary)
+      - PR link #1: https://github.com/mc-729/IT202-003/pull/38
     - Screenshots
       - Screenshot #1 ![image](https://user-images.githubusercontent.com/50148042/140778742-b287ea6f-59c2-4da8-829a-330d16357bda.png)
         - Screenshot #1 description explaining what you're trying to show:
           - Successful logout and cannot go back, must be logged in to see
 
-- [ ] \(mm/dd/yyyy of completion) Basic security rules implemented (from the proposal bullet point, if it's a sub-point indent it properly)
+- [ ] \(mm/dd/yyyy of completion) Basic security rules implemented 
   - Authentication:
     - Function to check if user is logged in
     - Function should be called on appropriate pages that only allow logged in users
