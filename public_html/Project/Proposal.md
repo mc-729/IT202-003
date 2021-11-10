@@ -2,7 +2,7 @@
 ## Project Summary: This project will create a simple e-commerce site for users. Administrators or store owners will be able to manage inventory and users will be able to manage their cart and place orders.
 ## Github Link: https://github.com/mc-729/IT202-003/tree/prod
 ## Project Board Link: https://github.com/mc-729/IT202-003/projects/1
-## Website Link: (Heroku Prod of Project folder)
+## Website Link: https://mc729-prod.herokuapp.com/Project/login.php
 ## Your Name: Matthew Cabrera
 
 <!--
@@ -40,15 +40,31 @@
     - The only fields that may be cleared are the password fields
 
   -  List of Evidence of Feature Completion
-    - Status: Pending (Completed, Partially working, Incomplete, Pending)
-    - Direct Link: (Direct link to the file or files in heroku prod for quick testing (even if it's a protected page))
+    - Status: Completed
+    - Direct Link: https://mc729-prod.herokuapp.com/Project/register.php
     - Pull Requests
-      - PR link #1 (repeat as necessary)
+      - PR link #1 https://github.com/mc-729/IT202-003/pull/9
+      - PR link #2 https://github.com/mc-729/IT202-003/pull/36 
+      - Issue Link https://github.com/mc-729/IT202-003/issues/11
     - Screenshots
-      - Screenshot #1 (paste the image so it uploads to github) (repeat as necessary)
-        - Screenshot #1 description explaining what you're trying to show
+      - Screenshot #1 ![image](https://user-images.githubusercontent.com/50148042/140771406-30058f08-80ea-4857-9ced-eadd6ea5928f.png) (repeat as necessary)
+        - Screenshot #1 description explaining what you're trying to show:
+          - This shows that the form fields are displaying and functioning as intended.
+      - Screenshot #2 ![image](https://user-images.githubusercontent.com/50148042/140771620-3cbe22d0-9350-4471-8f6b-b1bd17e921aa.png) 
+        - Screenshot #2 description explaining what you're trying to show:
+          - This shows that the users table has been created and functions.
+      - Screenshot #3 ![image](https://user-images.githubusercontent.com/50148042/140772218-ad936228-bb00-4caf-82f5-da2dfb03dd16.png)
+        - Screenshot #3 description explaining what you're trying to show:
+          - This shows that the email must be unique in order to register.
+      - Screenshot #4 ![image](https://user-images.githubusercontent.com/50148042/140772426-2d9eb2cc-9718-488a-b4fa-d8a00094ff78.png)
+        - Screenshot #4 description explaining what you're trying to show:
+          - This shows that the username must be unique in order to register.
+      - Screenshot #5 ![image](https://user-images.githubusercontent.com/50148042/140773310-319b4535-db99-4dd6-83a8-7568705f3dba.png)
+        - Screenshot #5 description explaining what you're trying to show:
+          - This shows that the account has successfully been registered.
+        
 
-- [ ] \(mm/dd/yyyy of completion) User will be able to login to their account (given they enter the correct credentials) (from the proposal bullet point, if it's a sub-point indent it properly)
+- [ ] \(11/01/2021) User will be able to login to their account (given they enter the correct credentials) (from the proposal bullet point, if it's a sub-point indent it properly)
 
   - Form
     - User can login with email or username
@@ -63,12 +79,18 @@
     - Status: Pending (Completed, Partially working, Incomplete, Pending)
     - Direct Link: (Direct link to the file or files in heroku prod for quick testing (even if it's a protected page))
     - Pull Requests
-      - PR link #1 (repeat as necessary)
+      - PR link #1 https://github.com/mc-729/IT202-003/pull/28
+      - PR link #2 https://github.com/mc-729/IT202-003/pull/36 
     - Screenshots
-      - Screenshot #1 (paste the image so it uploads to github) (repeat as necessary)
-        - Screenshot #1 description explaining what you're trying to show
+      - Screenshot #1 ![image](https://user-images.githubusercontent.com/50148042/140776525-dfa412f9-88f5-4597-a162-34968cd576ff.png)
+        - Screenshot #1 description explaining what you're trying to show:
+          - Successful login!
 
-- [ ] \(mm/dd/yyyy of completion) User will be able to logout (from the proposal bullet point, if it's a sub-point indent it properly)
+      - Screenshot #2 ![image](https://user-images.githubusercontent.com/50148042/140777139-3e06ee33-edb0-4935-9d30-9ca9032c658a.png)
+        - Screenshot #2 description explaining what you're trying to show:
+          - Failed login, wrong password with flash message.
+
+- [ ] \(11/01/2021) User will be able to logout (from the proposal bullet point, if it's a sub-point indent it properly)
   - Logging out will redirect to login page
   - User should see a message that they’ve successfully logged out
   - Session should be destroyed (so the back button doesn’t allow them access back in)
@@ -78,8 +100,9 @@
     - Pull Requests
       - PR link #1 (repeat as necessary)
     - Screenshots
-      - Screenshot #1 (paste the image so it uploads to github) (repeat as necessary)
-        - Screenshot #1 description explaining what you're trying to show
+      - Screenshot #1 ![image](https://user-images.githubusercontent.com/50148042/140778742-b287ea6f-59c2-4da8-829a-330d16357bda.png)
+        - Screenshot #1 description explaining what you're trying to show:
+          - Successful logout and cannot go back, must be logged in to see
 
 - [ ] \(mm/dd/yyyy of completion) Basic security rules implemented (from the proposal bullet point, if it's a sub-point indent it properly)
   - Authentication:
