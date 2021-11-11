@@ -46,6 +46,7 @@
       - PR link #1 https://github.com/mc-729/IT202-003/pull/9
       - PR link #2 https://github.com/mc-729/IT202-003/pull/36 
       - PR link #3 https://github.com/mc-729/IT202-003/pull/37
+      - PR link #4 https://github.com/mc-729/IT202-003/pull/46
       - Issue Link #1 https://github.com/mc-729/IT202-003/issues/11
    
     - Screenshots
@@ -86,11 +87,12 @@
     - This is a protected page (non-logged in users shouldn’t have access)
     - This can be home, profile, a dashboard, etc
   -  List of Evidence of Feature Completion
-    - Status: Pending (Completed, Partially working, Incomplete, Pending)
-    - Direct Link: (Direct link to the file or files in heroku prod for quick testing (even if it's a protected page))
+    - Status: Completed
+    - Direct Link: https://mc729-prod.herokuapp.com/Project/login.php
     - Pull Requests
       - PR link #1 https://github.com/mc-729/IT202-003/pull/28
-      - PR link #2 https://github.com/mc-729/IT202-003/pull/36 
+      - PR link #2 https://github.com/mc-729/IT202-003/pull/36
+      - PR link #3 https://github.com/mc-729/IT202-003/pull/46 
       - Issue Link #1 https://github.com/mc-729/IT202-003/issues/12
     
     - Screenshots
@@ -116,10 +118,11 @@
   - User should see a message that they’ve successfully logged out
   - Session should be destroyed (so the back button doesn’t allow them access back in)
   -  List of Evidence of Feature Completion
-    - Status: Pending (Completed, Partially working, Incomplete, Pending)
-    - Direct Link: (Direct link to the file or files in heroku prod for quick testing (even if it's a protected page))
+    - Status: Completed
+    - Direct Link: https://mc729-prod.herokuapp.com/Project/register.php Once registered the logout should work and redirect to login.php
     - Pull Requests
       - PR link #1: https://github.com/mc-729/IT202-003/pull/38
+      - PR link #2: https://github.com/mc-729/IT202-003/pull/46
       - Issues Link #1: https://github.com/mc-729/IT202-003/issues/13
    
     - Screenshots
@@ -127,6 +130,10 @@
       - Screenshot #1 ![image](https://user-images.githubusercontent.com/50148042/140778742-b287ea6f-59c2-4da8-829a-330d16357bda.png)
         - Screenshot #1 description explaining what you're trying to show:
           - Successful logout and cannot go back, must be logged in to see
+
+      - Screenshot #2 ![image](https://user-images.githubusercontent.com/50148042/141218754-2b9bddb0-608c-4e6a-944b-9594df6c4a47.png)
+        - Screenshot #2 description explaining what you're trying to show:
+          - Succesful logout and flash message stating a successful logout. User is also redirected back to the login page (login.php).
 
 - [X] \(11/10/2021) Basic security rules implemented 
   - Authentication:
@@ -136,8 +143,9 @@
     - Have a roles table (see below)
   -  List of Evidence of Feature Completion
     - Status: Completed
-    - Direct Link: (Direct link to the file or files in heroku prod for quick testing (even if it's a protected page))
+    - Direct Link: https://github.com/mc-729/IT202-003/tree/Milestone1/public_html/Project
     - Pull Requests
+      - PR link #1 https://github.com/mc-729/IT202-003/pull/46
       - Issues Link #1: https://github.com/mc-729/IT202-003/issues/14
    
     - Screenshots
@@ -159,9 +167,10 @@
   - Have a User Roles table (id, user_id, role_id, is_active, created, modified)
   - Include a function to check if a user has a specific role (we won’t use it for this milestone but it should be usable in the future)
   -  List of Evidence of Feature Completion
-    - Status: Pending (Completed, Partially working, Incomplete, Pending)
-    - Direct Link: (Direct link to the file or files in heroku prod for quick testing (even if it's a protected page))
+    - Status: Completed
+    - Direct Link: https://mc729-prod.herokuapp.com/Project/admin/create_role.php
     - Pull Requests
+      - PR link #1 https://github.com/mc-729/IT202-003/pull/46
       - Issues Link #1: https://github.com/mc-729/IT202-003/issues/15
     
     - Screenshots
@@ -181,9 +190,10 @@
 - [X] \(11/10/2021 of completion) Site should have basic styles/theme applied; everything should be styled (from the proposal bullet point, if it's a sub-point indent it properly)
   - I.e., forms/input, navigation bar, etc
   -  List of Evidence of Feature Completion
-    - Status: Pending (Completed, Partially working, Incomplete, Pending)
-    - Direct Link: (Direct link to the file or files in heroku prod for quick testing (even if it's a protected page))
+    - Status: Completed
+    - Direct Link: https://mc729-prod.herokuapp.com/Project/login.php
     - Pull Requests
+      - PR link #1 https://github.com/mc-729/IT202-003/pull/46
       - Issues Link #1: https://github.com/mc-729/IT202-003/issues/16
    
     - Screenshots
@@ -196,8 +206,9 @@
   - Any technical errors or debug output displayed will result in a loss of points
   -  List of Evidence of Feature Completion
     - Status: Completed
-    - Direct Link: (Direct link to the file or files in heroku prod for quick testing (even if it's a protected page))
+    - Direct Link: https://mc729-prod.herokuapp.com/Project/login.php
     - Pull Requests
+      - PR link #1 https://github.com/mc-729/IT202-003/pull/46
       - Issues Link #1: https://github.com/mc-729/IT202-003/issues/17
    
     - Screenshots
@@ -210,9 +221,10 @@
   - Email, username, etc
   -  List of Evidence of Feature Completion
     - Status: Completed
-    - Direct Link: (Direct link to the file or files in heroku prod for quick testing (even if it's a protected page))
+    - Direct Link: https://mc729-prod.herokuapp.com/Project/profile.php
     - Pull Requests
-      - Issues Linke #1: https://github.com/mc-729/IT202-003/issues/18
+      - PR link #1 https://github.com/mc-729/IT202-003/pull/46
+      - Issues Link #1: https://github.com/mc-729/IT202-003/issues/18
     
     - Screenshots
      
@@ -227,8 +239,9 @@
     - Hint: logic for the password check would be similar to login
   -  List of Evidence of Feature Completion
     - Status: Completed
-    - Direct Link: (Direct link to the file or files in heroku prod for quick testing (even if it's a protected page))
+    - Direct Link: https://mc729-prod.herokuapp.com/Project/profile.php
     - Pull Requests
+      - PR link #1 https://github.com/mc-729/IT202-003/pull/46
       - Issues Link #1: https://github.com/mc-729/IT202-003/issues/19 
    
     - Screenshots
