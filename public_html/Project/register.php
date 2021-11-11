@@ -66,7 +66,7 @@ if (isset($_POST["email"]) && isset($_POST["password"]) && isset($_POST["confirm
         $hasError = true;
     }
     if (empty($password)) {
-        flash("password must not be empty", "danger");
+        flash("Password must not be empty", "danger");
         $hasError = true;
     }
     if (empty($confirm)) {
