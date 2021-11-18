@@ -255,7 +255,187 @@
           - This shows if usernames and/or emails can be changed.
 
 - Milestone 2
+- [] \(mm/dd/yyyy) User with an admin role or shop owner role will be able to add products to inventory
+  - List of Evidence of Feature Completion
+  - Status: Pending
+  - Direct Link:
+  - Pull Requests
+    - PR link #1
+  
+  - Screenshots
+    
+    - Screenshot #1
+      - Screenshot #1 description explaining what you're trying to show
+
+- [] \(mm/dd/yyyy) Any user will be able to see products with visibility = true on the Shop page
+  - List of Evidence of Feature Completion
+  - Status: Pending
+  - Direct Link:
+  - Pull Requests
+    - PR link #1
+  
+  - Screenshots
+    
+    - Screenshot #1
+      - Screenshot #1 description explaining what you're trying to show
+
+- [] \(mm/dd/yyyy) Admin/Shop owner will be able to see products with any visibility
+  - List of Evidence of Feature Completion
+  - Status: Pending
+  - Direct Link:
+  - Pull Requests
+    - PR link #1
+  
+  - Screenshots
+    
+    - Screenshot #1
+      - Screenshot #1 description explaining what you're trying to show
+
+- [] \(mm/dd/yyyy) Admin/Shop owner will be able to edit any product
+  - List of Evidence of Feature Completion
+  - Status: Pending
+  - Direct Link:
+  - Pull Requests
+    - PR link #1
+  
+  - Screenshots
+    
+    - Screenshot #1
+      - Screenshot #1 description explaining what you're trying to show
+
+- [] \(mm/dd/yyyy) User will be able to click an item from a list and view a full page with more info about the item (Product Details Page)
+  - List of Evidence of Feature Completion
+  - Status: Pending
+  - Direct Link:
+  - Pull Requests
+    - PR link #1
+  
+  - Screenshots
+    
+    - Screenshot #1
+      - Screenshot #1 description explaining what you're trying to show
+
+- [] \(mm/dd/yyyy) User must be logged in for any Cart related activity below
+  - List of Evidence of Feature Completion
+  - Status: Pending
+  - Direct Link:
+  - Pull Requests
+    - PR link #1
+  
+  - Screenshots
+    
+    - Screenshot #1
+      - Screenshot #1 description explaining what you're trying to show
+
+- [] \(mm/dd/yyyy) User will be able to add items to Cart
+  - List of Evidence of Feature Completion
+  - Status: Pending
+  - Direct Link:
+  - Pull Requests
+    - PR link #1
+  
+  - Screenshots
+    
+    - Screenshot #1
+      - Screenshot #1 description explaining what you're trying to show
+
+- [] \(mm/dd/yyyy) User will be able to see their cart
+  - List of Evidence of Feature Completion
+  - Status: Pending
+  - Direct Link:
+  - Pull Requests
+    - PR link #1
+  
+  - Screenshots
+    
+    - Screenshot #1
+      - Screenshot #1 description explaining what you're trying to show
+
+- [] \(mm/dd/yyyy) User will be able to change quantity of items in their cart
+  - List of Evidence of Feature Completion
+  - Status: Pending
+  - Direct Link:
+  - Pull Requests
+    - PR link #1
+  
+  - Screenshots
+    
+    - Screenshot #1
+      - Screenshot #1 description explaining what you're trying to show
+
+- [] \(mm/dd/yyyy) User will be able to remove a single item from their cart vai button click
+  - List of Evidence of Feature Completion
+  - Status: Pending
+  - Direct Link:
+  - Pull Requests
+    - PR link #1
+  
+  - Screenshots
+    
+    - Screenshot #1
+      - Screenshot #1 description explaining what you're trying to show
+
+- [] \(mm/dd/yyyy) User will be able to clear their entire cart via a button click
+  - List of Evidence of Feature Completion
+  - Status: Pending
+  - Direct Link:
+  - Pull Requests
+    - PR link #1
+  
+  - Screenshots
+    
+    - Screenshot #1
+      - Screenshot #1 description explaining what you're trying to show
+
 - Milestone 3
+- [] \(mm/dd/yyyy) User will be able to purchase items in their Cart
+  - List of Evidence of Feature Completion
+  - Status: Pending
+  - Direct Link:
+  - Pull Requests
+    - PR link #1
+  
+  - Screenshots
+    
+    - Screenshot #1
+      - Screenshot #1 description explaining what you're trying to show
+
+- [] \(mm/dd/yyyy) Order Confirmation Page
+  - List of Evidence of Feature Completion
+  - Status: Pending
+  - Direct Link:
+  - Pull Requests
+    - PR link #1
+  
+  - Screenshots
+    
+    - Screenshot #1
+      - Screenshot #1 description explaining what you're trying to show
+
+- [] \(mm/dd/yyyy) User will be able to see their Purchase History
+  - List of Evidence of Feature Completion
+  - Status: Pending
+  - Direct Link:
+  - Pull Requests
+    - PR link #1
+  
+  - Screenshots
+    
+    - Screenshot #1
+      - Screenshot #1 description explaining what you're trying to show
+
+- [] \(mm/dd/yyyy) Store Owner will be able to see all Purchase History
+  - List of Evidence of Feature Completion
+  - Status: Pending
+  - Direct Link:
+  - Pull Requests
+    - PR link #1
+  
+  - Screenshots
+    
+    - Screenshot #1
+      - Screenshot #1 description explaining what you're trying to show
+
 - Milestone 4
 ### Intructions
 #### Don't delete this
