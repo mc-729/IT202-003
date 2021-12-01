@@ -3,7 +3,7 @@ require(__DIR__ . "/../../partials/nav.php");
 
 $results = [];
 $db = getDB();
-$stmt = $db->prepare("SELECT id, name, description, cost, stock, image FROM Products WHERE stock > 0 LIMIT 50");
+$stmt = $db->prepare("SELECT id, name, description, unit_price, stock FROM Products WHERE stock > 0 LIMIT 50");
 try {
     $stmt->execute();
     $r = $stmt->fetchAll(PDO::FETCH_ASSOC);
@@ -26,7 +26,7 @@ try {
     <div class="row row-cols-1 row-cols-md-5 g-4">
         <?php foreach ($results as $item) : ?>
             <div class="col">
-                <div class="card bg-dark">
+                <div class="card bg-light">
                     <div class="card-header">
                         Placeholder
                     </div>
@@ -39,7 +39,7 @@ try {
                         <p class="card-text">Description: <?php se($item, "description"); ?></p>
                     </div>
                     <div class="card-footer">
-                        Cost: <?php se($item, "cost"); ?>
+                        Cost: $ <?php se($item, "unit_price"); ?>
                         <button onclick="purchase('<?php se($item, 'id'); ?>')" class="btn btn-primary">Purchase</button>
                     </div>
                 </div>
