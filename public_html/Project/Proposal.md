@@ -278,16 +278,21 @@
   - Status: In Progress
   - Direct Link: https://mc729-prod.herokuapp.com/Project/shop.php
   - Pull Requests
-    - PR link #1
+    - PR link #1: https://github.com/mc-729/IT202-003/pull/72
   
   - Screenshots
     
-    - Screenshot #1
+    - Screenshot #1 ![image](https://user-images.githubusercontent.com/50148042/144697182-1696e3d1-6efb-455e-a52a-75934e576960.png)
       - Screenshot #1 description explaining what you're trying to show
+        - I am not logged in and I am able to see shop.php. I can also order the items based on cost, stock, name, created, in ascending or descending order.
+
+    - Screenshot #2 ![image](https://user-images.githubusercontent.com/50148042/144697253-a6fa64a2-3a4f-4598-802e-2f31a20f7367.png)
+      - Screenshot #2 description explaining what you're trying to show
+        - I am logged in as an admin and I am able to see shop.php. I can also order the items based on cost, stock, name, created, in ascending or descending order.
 
 - [] \(mm/dd/yyyy) Admin/Shop owner will be able to see products with any visibility
   - List of Evidence of Feature Completion
-  - Status: Pending
+  - Status: In Progress
   - Direct Link:
   - Pull Requests
     - PR link #1
@@ -299,7 +304,7 @@
 
 - [] \(mm/dd/yyyy) Admin/Shop owner will be able to edit any product
   - List of Evidence of Feature Completion
-  - Status: Pending
+  - Status: In Progress
   - Direct Link:
   - Pull Requests
     - PR link #1
@@ -311,7 +316,7 @@
 
 - [] \(mm/dd/yyyy) User will be able to click an item from a list and view a full page with more info about the item (Product Details Page)
   - List of Evidence of Feature Completion
-  - Status: Pending
+  - Status: In Progress
   - Direct Link:
   - Pull Requests
     - PR link #1
@@ -323,7 +328,7 @@
 
 - [] \(mm/dd/yyyy) User must be logged in for any Cart related activity below
   - List of Evidence of Feature Completion
-  - Status: Pending
+  - Status: In Progress
   - Direct Link:
   - Pull Requests
     - PR link #1
@@ -335,7 +340,7 @@
 
 - [] \(mm/dd/yyyy) User will be able to add items to Cart
   - List of Evidence of Feature Completion
-  - Status: Pending
+  - Status: In Progress
   - Direct Link:
   - Pull Requests
     - PR link #1
@@ -347,7 +352,7 @@
 
 - [] \(mm/dd/yyyy) User will be able to see their cart
   - List of Evidence of Feature Completion
-  - Status: Pending
+  - Status: In Progress
   - Direct Link:
   - Pull Requests
     - PR link #1
@@ -359,7 +364,7 @@
 
 - [] \(mm/dd/yyyy) User will be able to change quantity of items in their cart
   - List of Evidence of Feature Completion
-  - Status: Pending
+  - Status: In Progress
   - Direct Link:
   - Pull Requests
     - PR link #1
@@ -371,7 +376,7 @@
 
 - [] \(mm/dd/yyyy) User will be able to remove a single item from their cart vai button click
   - List of Evidence of Feature Completion
-  - Status: Pending
+  - Status: In Progress
   - Direct Link:
   - Pull Requests
     - PR link #1
@@ -383,7 +388,7 @@
 
 - [] \(mm/dd/yyyy) User will be able to clear their entire cart via a button click
   - List of Evidence of Feature Completion
-  - Status: Pending
+  - Status: In Progress
   - Direct Link:
   - Pull Requests
     - PR link #1
