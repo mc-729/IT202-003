@@ -256,22 +256,27 @@
 
 - Milestone 2
 
-- [] \(mm/dd/yyyy) User with an admin role or shop owner role will be able to add products to inventory
+- [X] \(11/30/2021) User with an admin role or shop owner role will be able to add products to inventory
   - List of Evidence of Feature Completion
-  - Status: Pending
-  - Direct Link:
+  - Status: Completed
+  - Direct Link: https://mc729-prod.herokuapp.com/Project/admin/add_items.php
   - Pull Requests
-    - PR link #1
+    - PR link #1: https://github.com/mc-729/IT202-003/pull/67
   
   - Screenshots
     
-    - Screenshot #1
-      - Screenshot #1 description explaining what you're trying to show
+    - Screenshot #1 ![image](https://user-images.githubusercontent.com/50148042/144171533-e4af5c16-f52b-45b9-b60c-32b8c12e1868.png)
+      - Screenshot #1 description explaining what you're trying to show:
+        - This shows I created an item/product with the id of 13.
+
+    - Screenshot #2 ![image](https://user-images.githubusercontent.com/50148042/144171796-fb6f230d-7126-44be-b827-d68bf0119045.png)
+      - Screenshot #2 description explaining what you're trying to show:
+        - This shows the item/product created with an id of 13 in the Products table. It was oreos.
 
 - [] \(mm/dd/yyyy) Any user will be able to see products with visibility = true on the Shop page
   - List of Evidence of Feature Completion
-  - Status: Pending
-  - Direct Link:
+  - Status: In Progress
+  - Direct Link: https://mc729-prod.herokuapp.com/Project/shop.php
   - Pull Requests
     - PR link #1
   
