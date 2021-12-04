@@ -275,8 +275,8 @@
 
 - [] \(mm/dd/yyyy) Any user will be able to see products with visibility = true on the Shop page
   - List of Evidence of Feature Completion
-  - Status: Pending
-  - Direct Link:
+  - Status: In Progress
+  - Direct Link: https://mc729-prod.herokuapp.com/Project/shop.php
   - Pull Requests
     - PR link #1
   
