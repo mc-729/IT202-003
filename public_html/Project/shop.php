@@ -36,7 +36,7 @@ if (!empty($col) && !empty($order)) {
     $query .= " ORDER BY $col $order"; //be sure you trust these values, I validate via the in_array checks above
 }
 //paginate function
-$per_page = 10;
+$per_page = 5;
 paginate($total_query . $query, $params, $per_page);
 //get the total
 /*$stmt = $db->prepare($total_query . $query);
@@ -212,6 +212,8 @@ try {
             </div>
         <?php endforeach; ?>
     </div>
+ <!-- this will be moved into a partial file for reusability-->
+ <?php include(__DIR__ . "/../../partials/pagination.php"); ?>
 </div>
 <?php
 require(__DIR__ . "/../../partials/footer.php");
