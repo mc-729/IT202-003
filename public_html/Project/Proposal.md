@@ -273,29 +273,46 @@
       - Screenshot #2 description explaining what you're trying to show:
         - This shows the item/product created with an id of 13 in the Products table. It was oreos.
 
-- [] \(mm/dd/yyyy) Any user will be able to see products with visibility = true on the Shop page
+- [X] \(12/7/2021) Any user will be able to see products with visibility = true on the Shop page
   - List of Evidence of Feature Completion
-  - Status: In Progress
+  - Status: Completed
   - Direct Link: https://mc729-prod.herokuapp.com/Project/shop.php
   - Pull Requests
-    - PR link #1
+    - PR link #1: https://github.com/mc-729/IT202-003/pull/75
+    - PR link #2: https://github.com/mc-729/IT202-003/pull/76
+    - PR link #3: https://github.com/mc-729/IT202-003/pull/77
+    - PR link #4: https://github.com/mc-729/IT202-003/pull/78
   
   - Screenshots
     
-    - Screenshot #1
-      - Screenshot #1 description explaining what you're trying to show
+    - Screenshot #1 ![image](https://user-images.githubusercontent.com/50148042/145084273-ab0439f6-60d5-4d0e-9fed-43480fe90b16.png)
+      - Screenshot #1 description explaining what you're trying to show:
+        - This shows that the shop is public (I am not logged in). It only shows items with a visibility of 1 or TRUE based on the Products table. I did not keep it to the 10 most recent because I added more than 10 items and I was working on the next feature alongside this one. The filters and sorting work as well as the search by partial name or full name of product.
 
-- [] \(mm/dd/yyyy) Admin/Shop owner will be able to see products with any visibility
+    - Screenshot #2 ![image](https://user-images.githubusercontent.com/50148042/145084875-102ce29e-4317-422c-8709-12bc4f82caee.png)
+      - Screenshot #2 description explaining what you're trying to show:
+        - This shows the products table so that you can see which items have a visibility of 1/True or 2/False.
+
+- [X] \(12/7/2021) Admin/Shop owner will be able to see products with any visibility
   - List of Evidence of Feature Completion
-  - Status: Pending
-  - Direct Link:
+  - Status: Completed mostly
+  - Direct Link: https://mc729-prod.herokuapp.com/Project/admin/list_items.php
+  - Direct Link 2: https://mc729-prod.herokuapp.com/Project/admin/all_items.php
   - Pull Requests
-    - PR link #1
+    - PR link #1: https://github.com/mc-729/IT202-003/pull/75
+    - PR link #2: https://github.com/mc-729/IT202-003/pull/76
+    - PR link #3: https://github.com/mc-729/IT202-003/pull/77
+    - PR link #4: https://github.com/mc-729/IT202-003/pull/78
   
   - Screenshots
     
-    - Screenshot #1
-      - Screenshot #1 description explaining what you're trying to show
+    - Screenshot #1 ![image](https://user-images.githubusercontent.com/50148042/145085240-345ac4c2-c037-4c24-9ca2-486ccef5cacf.png)
+      - Screenshot #1 description explaining what you're trying to show:
+        - This shows the list_items.php. In here all the items, even the out of stock and visibility of 2 items, are clearly visible to the admin/shop owner.
+
+    - Screenshot #2 ![image](https://user-images.githubusercontent.com/50148042/145085706-2586074f-0477-4b26-9ff3-7f17c174ea62.png)
+      - Screenshot #2 description explaining what you're trying to show:
+        - This shows the all_items.php. In here, the page is similar to the shop.php page and all items are visible except out of stock items. Still a WIP but since the previous screenshot shows the out of stock items, I hope this counts.
 
 - [] \(mm/dd/yyyy) Admin/Shop owner will be able to edit any product
   - List of Evidence of Feature Completion
