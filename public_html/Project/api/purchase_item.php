@@ -60,7 +60,7 @@ if (isset($_POST["item_id"]) && isset($_POST["stock"]) && isset($_POST["unit_pri
     }
     if ($isValid) {
         if (change_bills($unit_price * $stock, "purchase", get_user_account_id(), -1, "Purchased $stock $name")) {
-            record_purchase($item_id, $user_id, $stock);
+            record_purchase($item_id, $user_id, $stock, $unit_price);
             add_item($item_id, $user_id, $stock);
             http_response_code(200);
             $response["message"] = "Purchased $stock of $name";

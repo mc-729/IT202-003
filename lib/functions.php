@@ -408,7 +408,7 @@ function update_data($table, $id,  $data, $ignore = ["id", "submit"])
     }
     return false;
 }
-    function record_purchase($item_id, $user_id, $stock, $price)
+    function record_purchase($item_id, $user_id, $stock, $unit_price)
 {
     //I'm using negative values for predefined items so I can't validate >= 0 for item_id
     if (/*$item_id <= 0 ||*/$user_id <= 0 || $stock === 0) {
@@ -418,7 +418,7 @@ function update_data($table, $id,  $data, $ignore = ["id", "submit"])
     $db = getDB();
     $stmt = $db->prepare("INSERT INTO Products (item_id, user_id, stock, unit_price) VALUES (:iid, :uid, :s, :up)");
     try {
-        $stmt->execute([":iid" => $item_id, ":uid" => $user_id, ":s" => $stock, ":up" => $price]);
+        $stmt->execute([":iid" => $item_id, ":uid" => $user_id, ":s" => $stock, ":up" => $unit_price]);
         return true;
     } catch (PDOException $e) {
         error_log("Error recording purchase $stock of $item_id for user $user_id: " . var_export($e->errorInfo, true));
