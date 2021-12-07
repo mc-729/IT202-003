@@ -1,5 +1,5 @@
 <?php
-require(__DIR__ . "/../../partials/nav.php");
+require(__DIR__ . "/../../../partials/nav.php");
 
 $results = [];
 $db = getDB();
@@ -17,7 +17,7 @@ if (!in_array($order, ["asc", "desc"])) {
 $name = se($_GET, "name", "", false);
 
 //split query into data and total
-$base_query = "SELECT id, name, description, unit_price, stock, visibility FROM Products";
+$base_query = "SELECT id, name, description, unit_price, stock FROM Products";
 $total_query = "SELECT count(1) as total FROM Products";
 //dynamic query
 $query = " WHERE 1=1 and stock > 0"; //1=1 shortcut to conditionally build AND clauses
@@ -78,76 +78,8 @@ try {
     flash("<pre>" . var_export($e, true) . "</pre>");
 }
 ?>
-<script>
-       function purchase(item, unit_price) {
-        console.log("TODO purchase item", item);
-        let example = 1;
-        if (example === 1) {
-            let http = new XMLHttpRequest();
-            http.onreadystatechange = () => {
-                if (http.readyState == 4) {
-                    if (http.status === 200) {
-                        let data = JSON.parse(http.responseText);
-                        console.log("received data", data);
-                        flash(data.message, "success");
-                        refreshBalance();
-                    }
-                    console.log(http);
-                }
-            }
-            http.open("POST", "api/purchase_item.php", true);
-            let data = {
-                item_id: item,
-                quantity: 1,
-                unit_price: unit_price
-            }
-            let q = Object.keys(data).map(key => key + '=' + data[key]).join('&');
-            console.log(q)
-            http.setRequestHeader('Content-Type', 'application/x-www-form-urlencoded');
-            http.send(q);
-        } else if (example === 2) {
-            let data = new FormData();
-            data.append("item_id", item);
-            data.append("quantity", 1);
-            data.append("cost", unit_price);
-            fetch("api/purchase_item.php", {
-                    method: "POST",
-                    headers: {
-                        "Content-Type": "application/x-www-form-urlencoded",
-                        "X-Requested-With": "XMLHttpRequest",
-                    },
-                    body: data
-                })
-                .then(response => response.json())
-                .then(data => {
-                    console.log('Success:', data);
-                    flash(data.message, "success");
-                    refreshBalance();
-                })
-                .catch((error) => {
-                    console.error('Error:', error);
-                });
-        } else if (example === 3) {
-            $.post("api/puchase_item.php", {
-                    item_id: item,
-                    quantity: 1,
-                    unit_price: unit_price
-                }, (resp, status, xhr) => {
-                    console.log(resp, status, xhr);
-                    let data = JSON.parse(resp);
-                    flash(data.message, "success");
-                    refreshBalance();
-                },
-                (xhr, status, error) => {
-                    console.log(xhr, status, error);
-                });
-        }
-        //TODO create JS helper to update all show-balance elements
-    }
-</script>
-
 <div class="container-fluid">
-    <h1>Shop</h1>
+    <h1>All Items (including in/out of stock)</h1>
     <form class="row row-cols-auto g-3 align-items-center">
         <div class="col">
             <div class="input-group">
@@ -188,38 +120,25 @@ try {
         </div>
     </form>
     <div class="row row-cols-1 row-cols-md-5 g-4">
-        <?php foreach ($results as $item) : ?> <!-- gets each item in result -->
-            <!--console.log(<?php var_export($item); ?>)  results is a list of lists, and each item is a list -->
-            <?php if ($item["visibility"] == '2'): ?>
-                <?php continue;?>
-            <?php endif;?>
-
+        <?php foreach ($results as $item) : ?>
             <div class="col">
                 <div class="card bg-light">
                     <div class="card-header">
                         Placeholder
                     </div>
-                    <?php if (se($item, "image", "", false)) : ?>
-                        <img src="<?php se($item, "image"); ?>" class="card-img-top" alt="...">
-                    <?php endif; ?>
-
                     <div class="card-body">
                         <h5 class="card-title">Name: <?php se($item, "name"); ?></h5>
                         <p class="card-text">Description: <?php se($item, "description"); ?></p>
                         <p class="card-text">Category: <?php se($item, "category"); ?></p>
                         <p class="card-text">Stock: <?php se($item, "stock"); ?></p>
                     </div>
-                    <div class="card-footer">
-                        Cost: $ <?php se($item, "unit_price"); ?>
-                        <button onclick="purchase('<?php se($item, 'id'); ?>')" class="btn btn-primary">Purchase</button>
-                    </div>
                 </div>
             </div>
         <?php endforeach; ?>
     </div>
  <!-- this will be moved into a partial file for reusability-->
- <?php include(__DIR__ . "/../../partials/pagination.php"); ?>
+ <?php include(__DIR__ . "/../../../partials/pagination.php"); ?>
 </div>
 <?php
-require(__DIR__ . "/../../partials/footer.php");
+require(__DIR__ . "/../../../partials/footer.php");
 ?>
