@@ -44,7 +44,7 @@ if (isset($_POST["item_id"]) && isset($_POST["stock"]) && isset($_POST["unit_pri
     if($isValid){
         //get true price from DB, don't trust the client
         $db = getDB();
-        $stmt = $db->prepare("SELECT name,unit_price FROM Products where id = :id");
+        $stmt = $db->prepare("SELECT name, unit_price FROM Products where id = :id");
         $name = "";
         try {
             $stmt->execute([":id" => $item_id]);

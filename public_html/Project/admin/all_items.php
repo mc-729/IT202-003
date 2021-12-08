@@ -17,7 +17,7 @@ if (!in_array($order, ["asc", "desc"])) {
 $name = se($_GET, "name", "", false);
 
 //split query into data and total
-$base_query = "SELECT id, name, description, unit_price, stock FROM Products";
+$base_query = "SELECT id, name, description, unit_price, category, stock FROM Products";
 $total_query = "SELECT count(1) as total FROM Products";
 //dynamic query
 $query = " WHERE 1=1 and stock > 0"; //1=1 shortcut to conditionally build AND clauses
