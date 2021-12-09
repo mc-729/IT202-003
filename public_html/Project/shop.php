@@ -19,11 +19,9 @@ $name = se($_GET, "name", "", false);
 //split query into data and total
 $base_query = "SELECT id, name, description, category, unit_price, stock, visibility FROM Products";
 $total_query = "SELECT count(1) as total FROM Products";
-//if($item["visibility"]=='2'){
-//    continue;
-//}
+
 //dynamic query
-$query = " WHERE 1=1 and stock > 0"; //1=1 shortcut to conditionally build AND clauses
+$query = " WHERE 1=1 and stock > 0 AND visibility = 1"; //1=1 shortcut to conditionally build AND clauses
 $params = []; //define default params, add keys as needed and pass to execute
 
 //dynamic query
