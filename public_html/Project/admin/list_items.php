@@ -47,10 +47,8 @@ if (isset($_POST["itemName"])) {
                     <?php foreach ($record as $column => $value) : ?>
                         <td><?php se($value, null, "N/A"); ?></td>
                     <?php endforeach; ?>
-
-
                     <td>
-                        <a href="edit_item.php?id=<?php se($record, "id"); ?>">Edit</a>
+                        <a href="edit_items.php?id=<?php se($record, "id"); ?>">Edit</a>
                     </td>
                 </tr>
             <?php endforeach; ?>

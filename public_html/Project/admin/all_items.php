@@ -17,10 +17,10 @@ if (!in_array($order, ["asc", "desc"])) {
 $name = se($_GET, "name", "", false);
 
 //split query into data and total
-$base_query = "SELECT id, name, description, unit_price, stock FROM Products";
+$base_query = "SELECT id, name, description, unit_price, category, stock FROM Products";
 $total_query = "SELECT count(1) as total FROM Products";
 //dynamic query
-$query = " WHERE 1=1 and stock > 0"; //1=1 shortcut to conditionally build AND clauses
+$query = " WHERE 1=1 and stock >= 0"; //1=1 shortcut to conditionally build AND clauses
 $params = []; //define default params, add keys as needed and pass to execute
 
 //dynamic query
@@ -124,7 +124,12 @@ try {
             <div class="col">
                 <div class="card bg-light">
                     <div class="card-header">
-                        Placeholder
+                        <?php if (has_role("Admin") || has_role("Shop Owner")) : ?>
+                            <a href="<?php echo get_url('admin/edit_items.php'); ?>">Edit</a>
+                        <?php endif; ?>
+                    <?php if (se($item, "image", "", false)) : ?>
+                        <img src="<?php se($item, "image"); ?>" class="card-img-top" alt="...">
+                    <?php endif; ?>
                     </div>
                     <div class="card-body">
                         <h5 class="card-title">Name: <?php se($item, "name"); ?></h5>
