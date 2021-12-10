@@ -209,6 +209,7 @@ try {
                     <div class="card-footer">
                         Cost: $ <?php se($item, "unit_price"); ?>
                         <button onclick="purchase('<?php se($item, 'id'); ?>')" class="btn btn-primary">Purchase</button>
+                        <button onclick="redirect('<a href="<?php echo get_url('productDetails.php');?>)class="btn btn-primary">View Details</button>
                     </div>
                 </div>
             </div>
