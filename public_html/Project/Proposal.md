@@ -295,7 +295,7 @@
 
 - [X] \(12/7/2021) Admin/Shop owner will be able to see products with any visibility
   - List of Evidence of Feature Completion
-  - Status: Completed mostly
+  - Status: Completed
   - Direct Link: https://mc729-prod.herokuapp.com/Project/admin/list_items.php
   - Direct Link 2: https://mc729-prod.herokuapp.com/Project/admin/all_items.php
   - Pull Requests
@@ -304,6 +304,7 @@
     - PR link #3: https://github.com/mc-729/IT202-003/pull/77
     - PR link #4: https://github.com/mc-729/IT202-003/pull/78
     - PR link #5: https://github.com/mc-729/IT202-003/pull/79
+    - PR link #6: https://github.com/mc-729/IT202-003/pull/93
   
   - Screenshots
     
@@ -314,30 +315,45 @@
     - Screenshot #2 ![image](https://user-images.githubusercontent.com/50148042/145085706-2586074f-0477-4b26-9ff3-7f17c174ea62.png)
       - Screenshot #2 description explaining what you're trying to show:
         - This shows the all_items.php. In here, the page is similar to the shop.php page and all items are visible except out of stock items. Still a WIP but since the previous screenshot shows the out of stock items, I hope this counts.
+  
+    - Screenshot #3 ![image](https://user-images.githubusercontent.com/50148042/145660042-797c0dca-45a9-4bf1-9861-ad311b7c8961.png)
+      - Screenshot #3 description explaining what you're trying to show:
+        - This shows the all_items.php and actually works as intended now by showing all products in/out of stock to the admin/shop owner without having to search up the product like in list_items.php or having to hit the button in list_items.php. As you can see there are more pages in here than shop.php, an item with 0 in stock, and items with false visibility that only admins and shop owners can see.
 
-- [] \(12/08/2021) Admin/Shop owner will be able to edit any product
+- [X] \(12/08/2021) Admin/Shop owner will be able to edit any product
   - List of Evidence of Feature Completion
-  - Status: Pending
-  - Direct Link:
+  - Status:  Partially Completed
+  - Direct Link: https://mc729-prod.herokuapp.com/Project/shop.php
+  - Direct Link: https://mc729-prod.herokuapp.com/Project/admin/edit_items.php
+  - Direct Link: https://mc729-prod.herokuapp.com/Project/admin/list_items.php
+  - Direct Link: https://mc729-prod.herokuapp.com/Project/admin/edit_items.php?id=1
   - Pull Requests
     - PR link #1: https://github.com/mc-729/IT202-003/pull/90
   
   - Screenshots
     
-    - Screenshot #1
+    - Screenshot #1 ![image](https://user-images.githubusercontent.com/50148042/145659831-f35cdcbe-9ffa-426c-8e3f-25c2653ec211.png)
       - Screenshot #1 description explaining what you're trying to show
+        - This image shows I can edit any product as an admin or shop owner. However, my "Edit" url on the shop.php as the Shop Owner/Admin redirects me to edit_items.php. This means I get redirected to a page where I can't edit unlike the image shown above. How I got to the image above was from list_items.php and it was able to redirect me to the correct editing page and from there I can edit to my desire.
 
-- [] \(mm/dd/yyyy) User will be able to click an item from a list and view a full page with more info about the item (Product Details Page)
+- [X] \(12/10/2021) User will be able to click an item from a list and view a full page with more info about the item (Product Details Page)
   - List of Evidence of Feature Completion
-  - Status: Pending
-  - Direct Link:
+  - Status: Partially Working
+  - Direct Link: https://mc729-prod.herokuapp.com/Project/list_productDetails.php
   - Pull Requests
-    - PR link #1
+    - PR link #1: https://github.com/mc-729/IT202-003/pull/92
+    - PR link #2: https://github.com/mc-729/IT202-003/pull/93
+    - PR link #3: https://github.com/mc-729/IT202-003/pull/94
   
   - Screenshots
     
-    - Screenshot #1
+    - Screenshot #1 ![image](https://user-images.githubusercontent.com/50148042/145659552-3f2142b2-2938-438c-93a4-8780a121c9fd.png)
       - Screenshot #1 description explaining what you're trying to show
+        - A partially working php page for productDetails.php. I had a problem getting the link to work when any user with any role clicked on "View Details" on shop.php.
+
+    - Screenshot #2 ![image](https://user-images.githubusercontent.com/50148042/145660304-6f9f9f77-4805-49f9-ab5e-56b06774ba34.png)
+      - Screenshot #2 description explaining what you're trying to show
+        - Here you have the type the URL and must be logged in to see this php page. This is also a WIP and a different way I thought to approach this feature but still couldn't get it to work. What I wanted to happen is to not display the visibility column but also not display any items that are false==2 visibility. Unlike the previous link and image, based on the professors work, this doesn't work exactly as intended when a user clicks view more details on a specific item. This shows all the items and its details instead of just the one specific item. So there is that to fix too.
 
 - [] \(mm/dd/yyyy) User must be logged in for any Cart related activity below
   - List of Evidence of Feature Completion
