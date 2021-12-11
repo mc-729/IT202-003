@@ -315,12 +315,12 @@
       - Screenshot #2 description explaining what you're trying to show:
         - This shows the all_items.php. In here, the page is similar to the shop.php page and all items are visible except out of stock items. Still a WIP but since the previous screenshot shows the out of stock items, I hope this counts.
 
-- [] \(mm/dd/yyyy) Admin/Shop owner will be able to edit any product
+- [] \(12/08/2021) Admin/Shop owner will be able to edit any product
   - List of Evidence of Feature Completion
   - Status: Pending
   - Direct Link:
   - Pull Requests
-    - PR link #1
+    - PR link #1: https://github.com/mc-729/IT202-003/pull/90
   
   - Screenshots
     
