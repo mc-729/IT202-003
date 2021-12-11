@@ -1,11 +1,7 @@
 <?php
 //note we need to go up 1 more directory
-require(__DIR__ . "/../../../partials/nav.php");
-
-if ((!has_role("Admin") && !has_role("Shop Owner"))) {
-    flash("You don't have permission to view this page", "warning");
-    die(header("Location: $BASE_PATH" . "home.php"));
-}
+require(__DIR__ . "/../../partials/nav.php");
+is_logged_in(true);
 
 $results = [];
 if (isset($_POST["itemName"])) {
@@ -26,7 +22,7 @@ if (isset($_POST["itemName"])) {
     <h1>List Items</h1>
     <form method="POST" class="row row-cols-lg-auto g-3 align-items-center">
         <div class="input-group mb-3">
-            <input class="form-control" type="search" name="itemName" placeholder="Item Filter" />
+            <input class="form-control" type="search" name="itemName" placeholder="Search an item you wish to see info about" />
             <input class="btn btn-primary" type="submit" value="Search" />
         </div>
     </form>
@@ -40,16 +36,12 @@ if (isset($_POST["itemName"])) {
                         <?php foreach ($record as $column => $value) : ?>
                             <th><?php se($column); ?></th>
                         <?php endforeach; ?>
-                        <th>Actions</th>
                     </thead>
                 <?php endif; ?>
                 <tr>
                     <?php foreach ($record as $column => $value) : ?>
                         <td><?php se($value, null, "N/A"); ?></td>
                     <?php endforeach; ?>
-                    <td>
-                        <a href="edit_items.php?id=<?php se($record, "id"); ?>">Edit</a>
-                    </td>
                 </tr>
             <?php endforeach; ?>
         </table>
@@ -57,5 +49,5 @@ if (isset($_POST["itemName"])) {
 </div>
 <?php
 //note we need to go up 1 more directory
-require_once(__DIR__ . "/../../../partials/footer.php");
+require_once(__DIR__ . "/../../partials/footer.php");
 ?>

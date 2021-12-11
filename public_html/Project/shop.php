@@ -17,10 +17,11 @@ if (!in_array($order, ["asc", "desc"])) {
 $name = se($_GET, "name", "", false);
 
 //split query into data and total
-$base_query = "SELECT id, name, description, unit_price, stock, visibility FROM Products";
+$base_query = "SELECT id, name, description, category, unit_price, stock, visibility FROM Products";
 $total_query = "SELECT count(1) as total FROM Products";
+
 //dynamic query
-$query = " WHERE 1=1 and stock > 0"; //1=1 shortcut to conditionally build AND clauses
+$query = " WHERE 1=1 and stock > 0 AND visibility = 1"; //1=1 shortcut to conditionally build AND clauses
 $params = []; //define default params, add keys as needed and pass to execute
 
 //dynamic query
@@ -98,7 +99,7 @@ try {
             http.open("POST", "api/purchase_item.php", true);
             let data = {
                 item_id: item,
-                quantity: 1,
+                stock: 1,
                 unit_price: unit_price
             }
             let q = Object.keys(data).map(key => key + '=' + data[key]).join('&');
@@ -108,7 +109,7 @@ try {
         } else if (example === 2) {
             let data = new FormData();
             data.append("item_id", item);
-            data.append("quantity", 1);
+            data.append("stock", 1);
             data.append("cost", unit_price);
             fetch("api/purchase_item.php", {
                     method: "POST",
@@ -130,7 +131,7 @@ try {
         } else if (example === 3) {
             $.post("api/puchase_item.php", {
                     item_id: item,
-                    quantity: 1,
+                    stock: 1,
                     unit_price: unit_price
                 }, (resp, status, xhr) => {
                     console.log(resp, status, xhr);
@@ -188,21 +189,17 @@ try {
         </div>
     </form>
     <div class="row row-cols-1 row-cols-md-5 g-4">
-        <?php foreach ($results as $item) : ?> <!-- gets each item in result -->
-            <!--console.log(<?php var_export($item); ?>)  results is a list of lists, and each item is a list -->
-            <?php if ($item["visibility"] == '2'): ?>
-                <?php continue;?>
-            <?php endif;?>
-
+        <?php foreach ($results as $item) : ?>
             <div class="col">
                 <div class="card bg-light">
                     <div class="card-header">
-                        Placeholder
-                    </div>
+                        <?php if (has_role("Admin") || has_role("Shop Owner")) : ?>
+                            <a href="<?php echo get_url('admin/edit_items.php'); ?>">Edit</a>
+                        <?php endif; ?>
                     <?php if (se($item, "image", "", false)) : ?>
                         <img src="<?php se($item, "image"); ?>" class="card-img-top" alt="...">
                     <?php endif; ?>
-
+                    </div>
                     <div class="card-body">
                         <h5 class="card-title">Name: <?php se($item, "name"); ?></h5>
                         <p class="card-text">Description: <?php se($item, "description"); ?></p>
@@ -212,6 +209,7 @@ try {
                     <div class="card-footer">
                         Cost: $ <?php se($item, "unit_price"); ?>
                         <button onclick="purchase('<?php se($item, 'id'); ?>')" class="btn btn-primary">Purchase</button>
+                        <redirect('<a class="btn btn-secondary" href="productDetails.php?id=<?php se($row, 'id'); ?>">View Details</a>
                     </div>
                 </div>
             </div>
