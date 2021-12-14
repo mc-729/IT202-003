@@ -478,17 +478,25 @@
 
 - Milestone 4
 
-- [] \(mm/dd/yyyy) User can set their profile to be public or private (will need another column in Users table)
+- [X] \(12/13/2021) User can set their profile to be public or private (will need another column in Users table)
   - List of Evidence of Feature Completion
-  - Status: Pending
-  - Direct Link:
+  - Status: Completed
+  - Direct Link: https://mc729-prod.herokuapp.com/Project/profile.php
+  - Direct Link: https://mc729-prod.herokuapp.com/Project/profile.php?edit=true
   - Pull Requests
-    - PR link #1
+    - PR link #1 https://github.com/mc-729/IT202-003/pull/98
+    - PR link #2 https://github.com/mc-729/IT202-003/pull/97
+    - PR link #3 https://github.com/mc-729/IT202-003/pull/96
   
   - Screenshots
     
-    - Screenshot #1
+    - Screenshot #1 ![image](https://user-images.githubusercontent.com/50148042/145930905-1477e1ee-011f-4431-9e13-9721574b028f.png)
       - Screenshot #1 description explaining what you're trying to show
+        - Slider to pick between having a public and private profile.
+    
+    - Screenshot #2 ![image](https://user-images.githubusercontent.com/50148042/145931166-25022f28-6fe3-4331-b250-0cbab92f32db.png)
+      - Screenshot #2 description explaining what you're trying to show
+        - The users table now has the visibility column because of the new alter table sql file and shows that the account I am using now has a visibility of 1 when I changed it.
 
 - [] \(mm/dd/yyyy) User will be able to rate a product they purchased
   - List of Evidence of Feature Completion
