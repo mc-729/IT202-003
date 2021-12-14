@@ -534,29 +534,48 @@
     - Screenshot #1
       - Screenshot #1 description explaining what you're trying to show
 
-- [] \(mm/dd/yyyy) Add pagination to Shop Page (and any other product lists not yet mentioned)
+- [X] \(12/07/2021) Add pagination to Shop Page (and any other product lists not yet mentioned)
   - List of Evidence of Feature Completion
-  - Status: Pending
-  - Direct Link:
+  - Status: Completed
+  - Direct Link: https://mc729-prod.herokuapp.com/Project/shop.php
   - Pull Requests
-    - PR link #1
+    - PR link #1: https://github.com/mc-729/IT202-003/pull/75
+    - PR link #2: https://github.com/mc-729/IT202-003/pull/76
+    - PR link #3: https://github.com/mc-729/IT202-003/pull/77
+    - PR link #4: https://github.com/mc-729/IT202-003/pull/78
   
   - Screenshots
     
-    - Screenshot #1
+    - Screenshot #1 ![image](https://user-images.githubusercontent.com/50148042/145932005-242f8cf0-804e-418c-a910-0aa1e00d4755.png)
       - Screenshot #1 description explaining what you're trying to show
+        - Code has been implemented to add pagination into shop.php on my prod branch. Should have been visible since MS2.
 
-- [] \(mm/dd/yyyy) Store Owner will be able to see all products out of stock
+- [X] \(12/07/2021) Store Owner will be able to see all products out of stock
   - List of Evidence of Feature Completion
-  - Status: Pending
-  - Direct Link:
+  - Status: Completed
+  - Direct Link: https://mc729-prod.herokuapp.com/Project/admin/list_items.php
+  - Direct Link: https://mc729-prod.herokuapp.com/Project/admin/all_items.php
   - Pull Requests
-    - PR link #1
+    - PR link #1: https://github.com/mc-729/IT202-003/pull/75
+    - PR link #2: https://github.com/mc-729/IT202-003/pull/76
+    - PR link #3: https://github.com/mc-729/IT202-003/pull/77
+    - PR link #4: https://github.com/mc-729/IT202-003/pull/78
+    - PR link #5: https://github.com/mc-729/IT202-003/pull/79
+    - PR link #6: https://github.com/mc-729/IT202-003/pull/93
   
   - Screenshots
     
-    - Screenshot #1
-      - Screenshot #1 description explaining what you're trying to show
+    - Screenshot #1 ![image](https://user-images.githubusercontent.com/50148042/145085240-345ac4c2-c037-4c24-9ca2-486ccef5cacf.png)
+      - Screenshot #1 description explaining what you're trying to show:
+        - This shows the list_items.php. In here all the items, even the out of stock and visibility of 2 items, are clearly visible to the admin/shop owner.
+
+    - Screenshot #2 ![image](https://user-images.githubusercontent.com/50148042/145085706-2586074f-0477-4b26-9ff3-7f17c174ea62.png)
+      - Screenshot #2 description explaining what you're trying to show:
+        - This shows the all_items.php. In here, the page is similar to the shop.php page and all items are visible except out of stock items. Still a WIP but since the previous screenshot shows the out of stock items, I hope this counts.
+  
+    - Screenshot #3 ![image](https://user-images.githubusercontent.com/50148042/145660042-797c0dca-45a9-4bf1-9861-ad311b7c8961.png)
+      - Screenshot #3 description explaining what you're trying to show:
+        - This shows the all_items.php and actually works as intended now by showing all products in/out of stock to the admin/shop owner without having to search up the product like in list_items.php or having to hit the button in list_items.php. As you can see there are more pages in here than shop.php, an item with 0 in stock, and items with false visibility that only admins and shop owners can see.
 
 - [] \(mm/dd/yyyy) User can sort products by average rating on the Shop Page
   - List of Evidence of Feature Completion
