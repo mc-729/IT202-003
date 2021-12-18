@@ -426,47 +426,61 @@
     
     - Screenshot #1
       - Screenshot #1 description explaining what you're trying to show
+
 - Milestone 3
 
-- [] \(12/07/2021) User will be able to purchase items in their Cart
+- [] \(12/17/2021) User will be able to purchase items in their Cart
   - List of Evidence of Feature Completion
   - Status: In Progress
   - Direct Link:
   - Pull Requests
-    - PR link #1
+    - PR link #1 https://github.com/mc-729/IT202-003/pull/91
+    - PR link #2 https://github.com/mc-729/IT202-003/pull/102
+    - PR link #3 https://github.com/mc-729/IT202-003/pull/103
   
   - Screenshots
     
-    - Screenshot #1
+    - Screenshot #1 ![image](https://user-images.githubusercontent.com/50148042/146627175-8b77a7d0-a880-4d47-8e07-7ac3be3d1d35.png)
       - Screenshot #1 description explaining what you're trying to show
+        - Orders, OrderItems, and Cart tables have been made with no issues but my purchase history table is not up. Also working on a checkout form sql table as well, that hasn't been made. When it comes to making sql tables my struggle is usually the syntax and determining the data type I need.
 
-- [] \(mm/dd/yyyy) Order Confirmation Page
+- [] \(12/17/2021) Order Confirmation Page
   - List of Evidence of Feature Completion
-  - Status: Pending
-  - Direct Link:
+  - Status: In Progress
+  - Direct Link: https://mc729-prod.herokuapp.com/Project/orderConfirmation.php
   - Pull Requests
-    - PR link #1
+    - PR link #1 https://github.com/mc-729/IT202-003/pull/91
+    - PR link #2 https://github.com/mc-729/IT202-003/pull/102
+    - PR link #3 https://github.com/mc-729/IT202-003/pull/103
   
   - Screenshots
     
-    - Screenshot #1
+    - Screenshot #1 ![image](https://user-images.githubusercontent.com/50148042/146627385-aa87d45a-e816-4717-b0ec-a6856f170483.png)
       - Screenshot #1 description explaining what you're trying to show
+        - Order confirmation page has been made but is blank. Still need to find the appropriate template for it before. Need to work on previous bullet points/features of this current and previous milestone to probably make more progress or better sense of this.
 
 - [] \(mm/dd/yyyy) User will be able to see their Purchase History
   - List of Evidence of Feature Completion
-  - Status: Pending
-  - Direct Link:
+  - Status: In Progress
+  - Direct Link: https://mc729-prod.herokuapp.com/Project/userPurchaseHistory.php
   - Pull Requests
-    - PR link #1
+    - PR link #1 https://github.com/mc-729/IT202-003/pull/91
+    - PR link #2 https://github.com/mc-729/IT202-003/pull/102
+    - PR link #3 https://github.com/mc-729/IT202-003/pull/103
   
   - Screenshots
     
-    - Screenshot #1
+    - Screenshot #1 ![image](https://user-images.githubusercontent.com/50148042/146627301-23c8cad0-1637-4399-a250-9b63659b470f.png)
       - Screenshot #1 description explaining what you're trying to show
+        - The php file has been made but it is blank because I haven't found an appropriate template for it. Will continue to look over slides and github.
 
-- [] \(mm/dd/yyyy) Store Owner will be able to see all Purchase History
+    - Screenshot #2 ![image](https://user-images.githubusercontent.com/50148042/146627701-3db5650b-d21d-483e-8d8b-6b0bc35376e8.png)
+      - Screenshot #2 description explaining what you're trying to show
+        - The error I get while trying to run my sql table for purchase history. I also feel the need to mention that I tried to add in a Bills_History table and it actually ran but I realized that was not needed for the shop project. I was overthinking a feature of giving users credits to actually purchase the item but all they needed to be able to do was click the purchase button and be taken to their cart or order confirmation page.
+
+- [] \(12/17/2021) Store Owner will be able to see all Purchase History
   - List of Evidence of Feature Completion
-  - Status: Pending
+  - Status: In Progress
   - Direct Link:
   - Pull Requests
     - PR link #1
