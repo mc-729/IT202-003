@@ -428,9 +428,9 @@
       - Screenshot #1 description explaining what you're trying to show
 - Milestone 3
 
-- [] \(mm/dd/yyyy) User will be able to purchase items in their Cart
+- [] \(12/07/2021) User will be able to purchase items in their Cart
   - List of Evidence of Feature Completion
-  - Status: Pending
+  - Status: In Progress
   - Direct Link:
   - Pull Requests
     - PR link #1
