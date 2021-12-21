@@ -437,6 +437,8 @@
     - PR link #1 https://github.com/mc-729/IT202-003/pull/91
     - PR link #2 https://github.com/mc-729/IT202-003/pull/102
     - PR link #3 https://github.com/mc-729/IT202-003/pull/103
+    - PR link #4 https://github.com/mc-729/IT202-003/pull/105
+    - PR link #5 https://github.com/mc-729/IT202-003/pull/106
   
   - Screenshots
     
@@ -452,6 +454,7 @@
     - PR link #1 https://github.com/mc-729/IT202-003/pull/91
     - PR link #2 https://github.com/mc-729/IT202-003/pull/102
     - PR link #3 https://github.com/mc-729/IT202-003/pull/103
+    
   
   - Screenshots
     
@@ -467,6 +470,8 @@
     - PR link #1 https://github.com/mc-729/IT202-003/pull/91
     - PR link #2 https://github.com/mc-729/IT202-003/pull/102
     - PR link #3 https://github.com/mc-729/IT202-003/pull/103
+    - PR link #4 https://github.com/mc-729/IT202-003/pull/105
+    - PR link #5 https://github.com/mc-729/IT202-003/pull/106
   
   - Screenshots
     
@@ -483,7 +488,8 @@
   - Status: In Progress
   - Direct Link:
   - Pull Requests
-    - PR link #1
+    - PR link #1 https://github.com/mc-729/IT202-003/pull/105
+    - PR link #2 https://github.com/mc-729/IT202-003/pull/106
   
   - Screenshots
     
@@ -524,24 +530,26 @@
     - Screenshot #1
       - Screenshot #1 description explaining what you're trying to show
 
-- [] \(mm/dd/yyyy) User’s Purchase History Changes
+- [] \(12/21/2021) User’s Purchase History Changes
   - List of Evidence of Feature Completion
   - Status: Pending
   - Direct Link:
   - Pull Requests
-    - PR link #1
+    - PR link #1 https://github.com/mc-729/IT202-003/pull/105
+    - PR link #2 https://github.com/mc-729/IT202-003/pull/106
   
   - Screenshots
     
     - Screenshot #1
       - Screenshot #1 description explaining what you're trying to show
 
-- [] \(mm/dd/yyyy) Store Owner Purchase History Changes
+- [] \(12/21/2021) Store Owner Purchase History Changes
   - List of Evidence of Feature Completion
   - Status: Pending
   - Direct Link:
   - Pull Requests
-    - PR link #1
+    - PR link #1 https://github.com/mc-729/IT202-003/pull/105
+    - PR link #2 https://github.com/mc-729/IT202-003/pull/106
   
   - Screenshots
     
