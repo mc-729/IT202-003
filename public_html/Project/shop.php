@@ -195,6 +195,8 @@ try {
                     <div class="card-header">
                         <?php if (has_role("Admin") || has_role("Shop Owner")) : ?>
                             <a href="<?php echo get_url('admin/edit_items.php'); ?>">Edit</a>
+                            <!-- <a href="//<//?php //echo get_url('admin/edit_items.php?id=<//?php se($item, "id")'; ?>">Edit</a> -->
+                            <!-- my attemp to get the edit button to redirect to an edit page based on the item and item id but doesn't work -->
                         <?php endif; ?>
                     <?php if (se($item, "image", "", false)) : ?>
                         <img src="<?php se($item, "image"); ?>" class="card-img-top" alt="...">
