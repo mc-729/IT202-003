@@ -518,12 +518,12 @@
       - Screenshot #2 description explaining what you're trying to show
         - The users table now has the visibility column because of the new alter table sql file and shows that the account I am using now has a visibility of 1 when I changed it.
 
-- [] \(mm/dd/yyyy) User will be able to rate a product they purchased
+- [] \(12/21/2021) User will be able to rate a product they purchased
   - List of Evidence of Feature Completion
   - Status: Pending
   - Direct Link:
   - Pull Requests
-    - PR link #1
+    - PR link #1: https://github.com/mc-729/IT202-003/pull/108
   
   - Screenshots
     
@@ -599,12 +599,12 @@
       - Screenshot #3 description explaining what you're trying to show:
         - This shows the all_items.php and actually works as intended now by showing all products in/out of stock to the admin/shop owner without having to search up the product like in list_items.php or having to hit the button in list_items.php. As you can see there are more pages in here than shop.php, an item with 0 in stock, and items with false visibility that only admins and shop owners can see.
 
-- [] \(mm/dd/yyyy) User can sort products by average rating on the Shop Page
+- [] \(12/21/2021) User can sort products by average rating on the Shop Page
   - List of Evidence of Feature Completion
   - Status: Pending
-  - Direct Link:
+  - Direct Link: https://mc729-prod.herokuapp.com/Project/shop.php
   - Pull Requests
-    - PR link #1
+    - PR link #1: https://github.com/mc-729/IT202-003/pull/108
   
   - Screenshots
     
