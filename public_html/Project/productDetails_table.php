@@ -1,6 +1,7 @@
 <?php
 //requires functions.php
 //requires a duration to be set
+//this page does not work and possibly not needed for shop project
 if (!isset($duration)) {
     $duration = "day";
 }

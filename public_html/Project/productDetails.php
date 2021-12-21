@@ -1,4 +1,5 @@
 <?php
+//sampling profs view_competitions for viewing product details
 require_once(__DIR__ . "/../../partials/nav.php");
 is_logged_in(true);
 $db = getDB();
