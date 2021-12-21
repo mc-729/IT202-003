@@ -1,4 +1,5 @@
 <?php
+//this is sampling profs list_competitions for help
 require_once(__DIR__ . "/../../partials/nav.php");
 is_logged_in(true);
 $db = getDB();
@@ -10,15 +11,11 @@ if (isset($_POST["join"])) {
     $balance = get_account_balance();
 }
 $per_page = 5;
-paginate("SELECT count(1) as total FROM BGD_Competitions WHERE expires > current_timestamp() AND did_payout < 1 AND did_calc < 1");
+paginate("SELECT count(1) as total FROM Products");
 //handle page load
 //TODO fix join
-$stmt = $db->prepare("SELECT BGD_Competitions.id, title, min_participants, current_participants, current_reward, expires, creator_id, min_score, join_cost, IF(competition_id is null, 0, 1) as joined,  CONCAT(first_place,'% - ', second_place, '% - ', third_place, '%') as place FROM BGD_Competitions
-JOIN BGD_Payout_Options on BGD_Payout_Options.id = BGD_Competitions.payout_option
-LEFT JOIN (SELECT * FROM BGD_UserComps WHERE user_id = :uid) as uc ON uc.competition_id = BGD_Competitions.id WHERE expires > current_timestamp() AND did_payout < 1 AND did_calc < 1 ORDER BY expires desc");
-/*$stmt = $db->prepare("SELECT BGD_Competitions.id, title, min_participants, current_participants, current_reward, expires, creator_id, min_score, join_cost, IF(competition_id is null, 0, 1) as joined,  CONCAT(first_place,'% - ', second_place, '% - ', third_place, '%') as place FROM BGD_Competitions
-JOIN BGD_Payout_Options on BGD_Payout_Options.id = BGD_Competitions.payout_option
-LEFT JOIN BGD_UserComps on BGD_UserComps.competition_id = BGD_Competitions.id WHERE user_id = :uid AND expires > current_timestamp() AND did_payout < 1 AND did_calc < 1 ORDER BY expires desc");*/
+$stmt = $db->prepare("SELECT id, name, description, category, stock, unit_price, visibility from Products WHERE name like :name LIMIT 50");
+
 $results = [];
 try {
     $stmt->execute([":uid" => get_user_id()]);
@@ -27,30 +24,29 @@ try {
         $results = $r;
     }
 } catch (PDOException $e) {
-    flash("There was a problem fetching competitions, please try again later", "danger");
-    error_log("List competitions error: " . var_export($e, true));
+    flash("There was a problem fetching the product details, please try again later", "danger");
+    error_log("List Product Details error: " . var_export($e, true));
 }
 ?>
 <div class="container-fluid">
-    <h1>List Competitions</h1>
+    <h1>List Product Details</h1>
     <table class="table text-dark">
         <thead>
-            <th>Title</th>
-            <th>Participants</th>
-            <th>Reward</th>
-            <th>Min Score</th>
-            <th>Expires</th>
-            <th>Actions</th>
+            <th>Name</th>
+            <th>Description</th>
+            <th>Category</th>
+            <th>Price</th>
+            <th>Stock</th>
         </thead>
         <tbody>
             <?php if (count($results) > 0) : ?>
                 <?php foreach ($results as $row) : ?>
                     <tr>
-                        <td><?php se($row, "title"); ?></td>
-                        <td><?php se($row, "current_participants"); ?>/<?php se($row, "min_participants"); ?></td>
-                        <td><?php se($row, "current_reward"); ?><br>Payout: <?php se($row, "place", "-"); ?></td>
-                        <td><?php se($row, "min_score"); ?></td>
-                        <td><?php se($row, "expires", "-"); ?></td>
+                        <td><?php se($row, "Name"); ?></td>
+                        <td><?php se($row, "Description"); ?>
+                        <td><?php se($row, "Category"); ?>
+                        <td><?php se($row, "Price"); ?></td>
+                        <td><?php se($row, "Stock", "-"); ?></td>
                         <td>
                             <?php if (se($row, "joined", 0, false)) : ?>
                                 <button class="btn btn-primary disabled" onclick="event.preventDefault()" disabled>Already Joined</button>
@@ -67,7 +63,7 @@ try {
                 <?php endforeach; ?>
             <?php else : ?>
                 <tr>
-                    <td colspan="100%">No active competitions</td>
+                    <td colspan="100%">No products or details listed</td>
                 </tr>
             <?php endif; ?>
         </tbody>

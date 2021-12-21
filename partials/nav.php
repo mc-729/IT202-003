@@ -38,6 +38,7 @@ require_once(__DIR__ . "/../lib/functions.php");
             <ul class="navbar-nav me-auto mb-2 mb-lg-0">
                 <?php if (is_logged_in()) : ?>
                     <li class="nav-item"><a class="nav-link" href="<?php echo get_url('profile.php'); ?>">Profile</a></li>
+                    <li class="nav-item"><a class="nav-link" href="<?php echo get_url('userPurchaseHistory.php'); ?>">Purchase History</a></li>
                 <?php endif; ?>
                 <?php if (!is_logged_in()) : ?>
                     <li class="nav-item"><a class="nav-link" href="<?php echo get_url('login.php'); ?>">Login</a></li>
@@ -58,6 +59,7 @@ require_once(__DIR__ . "/../lib/functions.php");
                             <li><a class="dropdown-item" href="<?php echo get_url('admin/add_items.php'); ?>">Add Items</a></li>
                             <li><a class="dropdown-item" href="<?php echo get_url('admin/give_bills.php'); ?>">Give Bills</a></li>
                             <li><a class="dropdown-item" href="<?php echo get_url('admin/all_items.php'); ?>">All Items</a></li>
+                            <li><a class="dropdown-item" href="<?php echo get_url('admin/allPurchaseHistory.php'); ?>">All Users Purchase History</a></li>
                         </ul>
                     </li>
                 <?php endif; ?>
