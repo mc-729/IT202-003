@@ -165,6 +165,7 @@ try {
                     <option value="stock">Stock</option>
                     <option value="name">Name</option>
                     <option value="created">Created</option>
+                    <option value="rating">Rating</option>
                 </select>
                 <script>
                     //quick fix to ensure proper value is selected since
@@ -207,6 +208,7 @@ try {
                         <p class="card-text">Description: <?php se($item, "description"); ?></p>
                         <p class="card-text">Category: <?php se($item, "category"); ?></p>
                         <p class="card-text">Stock: <?php se($item, "stock"); ?></p>
+                        <p class="card-text">Rating: <?php se($item, "rating"); ?></p>
                     </div>
                     <div class="card-footer">
                         Cost: $ <?php se($item, "unit_price"); ?>
