@@ -1,7 +1,11 @@
 <?php
 //sampling profs view_competitions for viewing product details
-require_once(__DIR__ . "/../../partials/nav.php");
+require_once(__DIR__ . "/../../../partials/nav.php");
 is_logged_in(true);
+if (!has_role("Admin") && !has_role("Shop Owner")) {
+    flash("You don't have permission to view this page", "warning");
+    die(header("Location: $BASE_PATH" . "home.php"));
+}
 $db = getDB();
 //handle join
 if (isset($_POST["join"])) {
@@ -66,8 +70,8 @@ try {
             <?php endif; ?>
         </tbody>
     </table>
-    <?php include(__DIR__ . "/../../partials/pagination.php"); ?>
+    <?php include(__DIR__ . "/../../../partials/pagination.php"); ?>
 </div>
 <?php
-require(__DIR__ . "/../../partials/footer.php");
+require(__DIR__ . "/../../../partials/footer.php");
 ?>
