@@ -429,10 +429,10 @@
 
 - Milestone 3
 
-- [] \(12/17/2021) User will be able to purchase items in their Cart
+- [X] \(12/17/2021) User will be able to purchase items in their Cart
   - List of Evidence of Feature Completion
-  - Status: In Progress
-  - Direct Link:
+  - Status: Incomplete, partially working 
+  - Direct Link: N/A Since it isn't fully working
   - Pull Requests
     - PR link #1 https://github.com/mc-729/IT202-003/pull/91
     - PR link #2 https://github.com/mc-729/IT202-003/pull/102
@@ -446,9 +446,9 @@
       - Screenshot #1 description explaining what you're trying to show
         - Orders, OrderItems, and Cart tables have been made with no issues but my purchase history table is not up. Also working on a checkout form sql table as well, that hasn't been made. When it comes to making sql tables my struggle is usually the syntax and determining the data type I need.
 
-- [] \(12/17/2021) Order Confirmation Page
+- [X] \(12/17/2021) Order Confirmation Page
   - List of Evidence of Feature Completion
-  - Status: In Progress
+  - Status: Incomplete, partially working
   - Direct Link: https://mc729-prod.herokuapp.com/Project/orderConfirmation.php
   - Pull Requests
     - PR link #1 https://github.com/mc-729/IT202-003/pull/91
@@ -462,9 +462,9 @@
       - Screenshot #1 description explaining what you're trying to show
         - Order confirmation page has been made but is blank. Still need to find the appropriate template for it before. Need to work on previous bullet points/features of this current and previous milestone to probably make more progress or better sense of this.
 
-- [] \(mm/dd/yyyy) User will be able to see their Purchase History
+- [X] \(12/21/2021) User will be able to see their Purchase History
   - List of Evidence of Feature Completion
-  - Status: In Progress
+  - Status: Incomplete, partially working
   - Direct Link: https://mc729-prod.herokuapp.com/Project/userPurchaseHistory.php
   - Pull Requests
     - PR link #1 https://github.com/mc-729/IT202-003/pull/91
@@ -482,19 +482,24 @@
     - Screenshot #2 ![image](https://user-images.githubusercontent.com/50148042/146627701-3db5650b-d21d-483e-8d8b-6b0bc35376e8.png)
       - Screenshot #2 description explaining what you're trying to show
         - The error I get while trying to run my sql table for purchase history. I also feel the need to mention that I tried to add in a Bills_History table and it actually ran but I realized that was not needed for the shop project. I was overthinking a feature of giving users credits to actually purchase the item but all they needed to be able to do was click the purchase button and be taken to their cart or order confirmation page.
+    
+    - Screenshot #3 ![image](https://user-images.githubusercontent.com/50148042/147015930-ee818b8b-7b67-4cee-b8cc-c1b0981e6ec3.png)
+      - Screenshot #3 description explaining what you're trying to show
+        - I made as some progress in creating the look for the php page now but still getting this flash error message.
 
-- [] \(12/17/2021) Store Owner will be able to see all Purchase History
+- [X] \(12/17/2021) Store Owner will be able to see all Purchase History
   - List of Evidence of Feature Completion
-  - Status: In Progress
-  - Direct Link:
+  - Status: Incomplete, partially working
+  - Direct Link: https://mc729-prod.herokuapp.com/Project/admin/allPurchaseHistory.php
   - Pull Requests
     - PR link #1 https://github.com/mc-729/IT202-003/pull/105
     - PR link #2 https://github.com/mc-729/IT202-003/pull/106
   
   - Screenshots
     
-    - Screenshot #1
+    - Screenshot #1 ![image](https://user-images.githubusercontent.com/50148042/147016618-4ecfed78-c2f6-4b1c-b3fc-6fe48fadb43e.png)
       - Screenshot #1 description explaining what you're trying to show
+        - Here I am showing a similar page to the user's purchase history, however I wanted the admin to be the only one to view this and to be able to see all purchases made. Having similar issues as the other php page for the user's purchase history. 
 
 - Milestone 4
 
@@ -518,43 +523,45 @@
       - Screenshot #2 description explaining what you're trying to show
         - The users table now has the visibility column because of the new alter table sql file and shows that the account I am using now has a visibility of 1 when I changed it.
 
-- [] \(12/21/2021) User will be able to rate a product they purchased
+- [X] \(12/21/2021) User will be able to rate a product they purchased
   - List of Evidence of Feature Completion
-  - Status: Pending
-  - Direct Link:
+  - Status: Incomplete, partially working
+  - Direct Link: https://mc729-prod.herokuapp.com/Project/shop.php
   - Pull Requests
     - PR link #1: https://github.com/mc-729/IT202-003/pull/108
   
   - Screenshots
     
-    - Screenshot #1
+    - Screenshot #1 ![image](https://user-images.githubusercontent.com/50148042/147019447-0548555e-677f-4f0b-b31c-ec2035eb051d.png)
       - Screenshot #1 description explaining what you're trying to show
+        - Ratings table created and working. However, most of my problems have been related to table issues and the user can't really rate their items. So I've been having a hard time trying to fix it without breaking the code provided on github and the help from the slides.
 
-- [] \(12/21/2021) User’s Purchase History Changes
+- [X] \(12/21/2021) User’s Purchase History Changes
   - List of Evidence of Feature Completion
-  - Status: Pending
-  - Direct Link:
+  - Status: Incomplete, partially working
+  - Direct Link: https://mc729-prod.herokuapp.com/Project/userPurchaseHistory.php
   - Pull Requests
     - PR link #1 https://github.com/mc-729/IT202-003/pull/105
     - PR link #2 https://github.com/mc-729/IT202-003/pull/106
   
   - Screenshots
     
-    - Screenshot #1
+    - Screenshot #1 ![image](https://user-images.githubusercontent.com/50148042/147019678-b6033b21-2ccb-4cae-affe-8d59518c166c.png)
       - Screenshot #1 description explaining what you're trying to show
-
-- [] \(12/21/2021) Store Owner Purchase History Changes
+        - The php page was created and on the front end at the very least has been designed to look the part. It does not function however as I am having the same issues as I did in MS2 and MS3.
+- [X] \(12/21/2021) Store Owner Purchase History Changes
   - List of Evidence of Feature Completion
-  - Status: Pending
-  - Direct Link:
+  - Status: Incomplete, partially working
+  - Direct Link: https://mc729-prod.herokuapp.com/Project/admin/allPurchaseHistory.php
   - Pull Requests
     - PR link #1 https://github.com/mc-729/IT202-003/pull/105
     - PR link #2 https://github.com/mc-729/IT202-003/pull/106
   
   - Screenshots
     
-    - Screenshot #1
+    - Screenshot #1 ![image](https://user-images.githubusercontent.com/50148042/147019890-62149ac8-f532-4378-88bc-7a55ffa59502.png)
       - Screenshot #1 description explaining what you're trying to show
+        - I've been getting similar results for every new page I make with the same flash error message. The fact that the purchase history table is also not working is contributing to this issue as well.
 
 - [X] \(12/07/2021) Add pagination to Shop Page (and any other product lists not yet mentioned)
   - List of Evidence of Feature Completion
@@ -599,17 +606,18 @@
       - Screenshot #3 description explaining what you're trying to show:
         - This shows the all_items.php and actually works as intended now by showing all products in/out of stock to the admin/shop owner without having to search up the product like in list_items.php or having to hit the button in list_items.php. As you can see there are more pages in here than shop.php, an item with 0 in stock, and items with false visibility that only admins and shop owners can see.
 
-- [] \(12/21/2021) User can sort products by average rating on the Shop Page
+- [X] \(12/21/2021) User can sort products by average rating on the Shop Page
   - List of Evidence of Feature Completion
-  - Status: Pending
+  - Status: Incomplete, partially working
   - Direct Link: https://mc729-prod.herokuapp.com/Project/shop.php
   - Pull Requests
     - PR link #1: https://github.com/mc-729/IT202-003/pull/108
   
   - Screenshots
     
-    - Screenshot #1
+    - Screenshot #1 ![image](https://user-images.githubusercontent.com/50148042/147020453-58916af8-195c-4965-acc7-e0c7651ca682.png)
       - Screenshot #1 description explaining what you're trying to show
+        - The user does have the option to sort the products based on the average rating but because of the previous features having some technical issues, this doesn't work too.
 ### Intructions
 #### Don't delete this
 1. Pick one project type
