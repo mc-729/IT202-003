@@ -1,4 +1,7 @@
-# Youtube Video: https://youtu.be/M6cv3jRP1Yo
+# Youtube Video Part 1: https://youtu.be/2XtlxepdEAE
+# Youtube Video Part 2: https://youtu.be/gN_xIKy0r8Q
+# Youtube Video Part 3: https://youtu.be/iUg0n-2jDQY
+# Youtube Video Part 4: https://youtu.be/2IMj71AXB3Y
 # Project Name: Simple Shop
 ## Project Summary: This project will create a simple e-commerce site for users. Administrators or store owners will be able to manage inventory and users will be able to manage their cart and place orders.
 ## Github Link: https://github.com/mc-729/IT202-003/tree/prod
