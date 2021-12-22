@@ -1,3 +1,4 @@
+# Youtube Video: https://youtu.be/M6cv3jRP1Yo
 # Project Name: Simple Shop
 ## Project Summary: This project will create a simple e-commerce site for users. Administrators or store owners will be able to manage inventory and users will be able to manage their cart and place orders.
 ## Github Link: https://github.com/mc-729/IT202-003/tree/prod
