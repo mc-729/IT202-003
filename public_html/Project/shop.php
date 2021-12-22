@@ -208,7 +208,7 @@ try {
                         <p class="card-text">Description: <?php se($item, "description"); ?></p>
                         <p class="card-text">Category: <?php se($item, "category"); ?></p>
                         <p class="card-text">Stock: <?php se($item, "stock"); ?></p>
-                        <p class="card-text">Rating: <?php se($item, "rating"); ?></p>
+                        <p class="card-text">Avg. Rating: <?php se($item, "rating"); ?></p>
                     </div>
                     <div class="card-footer">
                         Cost: $ <?php se($item, "unit_price"); ?>
